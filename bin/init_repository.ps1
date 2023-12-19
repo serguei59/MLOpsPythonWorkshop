@@ -4,7 +4,7 @@
 
 #.\init_repository.ps1 -repositoryName "MLOpsPythonMyDemo" -environmentName "MLOpsPython"
 param (
-    [string]$repositoryName = "MLOpsPythonWorkshop",
+    [string]$repositoryName = "MLOpsPythonWorkshop2",
     [string]$environmentName = "MLOpsPython"
 )
 
@@ -58,7 +58,7 @@ $credentials=$(az ad sp create-for-rbac --name "mlapp" --role contributor --scop
 
 # Create GitHub secrets needed for the GitHub Actions
 #gh secret set AZURE_TENANT_ID --body $tenantId --env $environmentName
-#gh secret set AZURE_SUBSCRIPTION_ID --body $subscriptionId --env $environmentName
+gh secret set AZURE_SUBSCRIPTION_ID --body $subscriptionId --env $environmentName
 #gh secret set AZURE_CLIENT_ID --body $appId --env $environmentName
 $jsonCredentials = ($credentials | ConvertFrom-Json | ConvertTo-Json -Compress).Replace("`"", "\`"")
 echo $jsonCredentials
