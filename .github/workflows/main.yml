@@ -15,7 +15,7 @@ env:
   AZURE_ML_WORKSPACE_NAME: "cats-dogs-conga"
   AZURE_WEBAPP_NAME: "cats-dogs-conga"
   DELETE_WEBAPP: "false"
-  DOCKER_IMAGE_NAME: "guillaumechervetlunique/mlopspython/birth"
+  DOCKER_IMAGE_NAME: "robertcarry/mlopspython/birth"
 
 permissions:
   id-token: write
